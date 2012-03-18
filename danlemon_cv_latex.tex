@@ -1,0 +1,184 @@
+% LaTeX CV
+\documentclass[final,a4paper,notitlepage,10pt]{report}
+
+%%% Packages %%%
+\usepackage[utf8]{inputenc}	% inputenc for encoding to utf8
+\usepackage{auto-pst-pdf}	% auto-pst-pdf converts pst to pdf
+\usepackage{pst-barcode}	% pst-barcode try implement QR code
+\usepackage{multicol}	% multicol used for multiple columns
+\usepackage[paper=a4paper,left=0.75cm,right=0.75cm,top=0.75cm,bottom=0.75cm,noheadfoot]{geometry}	% geometry for margins
+\usepackage[hidelinks,breaklinks]{hyperref}	% hyperref for linking references for pdf
+\usepackage{wrapfig}	% wrapfig to wrap text around figures
+\usepackage{mdwlist}	% mdwlist for compact enumeration/list items
+\usepackage[compact]{titlesec}	% titlesec for title section layout
+\usepackage{mdwlist}	% mdwlist for compact enumeration/list items
+\usepackage{multicol}	% multicol for multiple columns
+
+% Rule settings
+\hyphenpenalty=5000
+\tolerance=1000
+
+% for mailto command
+\newcommand{\mailto}[1]{\href{mailto:#1}{#1}}
+
+% change itemize to be compact
+\makecompactlist{compactitemize}{itemize}
+
+% Name and contact information
+\newcommand{\name}{Daniel Lemon}
+\newcommand{\addr}{158 Park Avenue, Barking, IG11 8QY, England}
+\newcommand{\phone}{+44 785 241 2132}
+\newcommand{\email}{\mailto{dan@danlemon.com}}
+\newcommand{\website}{\href{http://danlemon.com}{http://danlemon.com}}
+\newcommand{\github}{\href{https://github.com/dan2k3k4}{https://github.com/dan2k3k4}}
+\newcommand{\twitter}{\href{https://twitter.com/dan2k3k4}{https://twitter.com/dan2k3k4}}
+
+% tweak title spacing
+\titlespacing{\section}{0pt}{*2}{*0}
+\titlespacing{\subsection}{0pt}{*2}{*0}
+\titlespacing{\subsubsection}{0pt}{*2}{*0}
+
+% disables chapter, section and subsection numbering
+\setcounter{secnumdepth}{-1} 
+
+% set paragraph indent to 0
+\setlength\parindent{0pt}
+
+% format section title with a nice center line
+%\titleformat\section{\normalfont\large\centerline{\hss\rule{.7\textwidth}{.01em}\hss}}{\thesection}{.01em}{}
+
+% set pagestyle to empty
+\pagestyle{empty}
+
+% begin actual CV
+\begin{document}
+
+% wrap whole top section in one textwidth minipage
+\begin{minipage}[t]{\textwidth}
+	\begin{minipage}{1in}
+	\begin{pspicture}(1in, 1in)
+	% The MECARD format is used to exchange contact information.
+	% \psbarcode{MECARD:N:Lemon,Daniel;EMAIL:dan@danlemon.com;TEL:00447852412132;NOTE:Software Programmer;URL:http://danlemon.com;}{}{qrcode}
+		\psbarcode{MECARD:N:Lemon,Daniel;EMAIL:dan@danlemon.com;TEL:00447852412132;URL:http://danlemon.com;;}{}{qrcode}
+	\end{pspicture}
+	\end{minipage}\hspace{0.6cm}% adjust for horizontal spacing
+	\begin{minipage}{0.85\textwidth}
+	\textbf{\LARGE \qquad \name }
+
+	\begin{tabular*}{\textwidth}{@{} p{0.4\textwidth} l}\\
+	\textit{Email:} \email\ & \textit{Address:} \addr \\
+	\textit{Web:} \website\ & \textit{Mobile:} \phone \\
+	\textit{GitHub:} \github\ & \textit{Twitter:} \twitter \\
+	\end{tabular*}\\
+	
+	\textbf{Objective:} Position as a junior technical software developer within an enthusiastic development team.\\
+	\end{minipage}
+\end{minipage}
+
+\section*{Personal Profile {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
+\begin{compactitemize}
+\item Enthusiastic outgoing undergraduate with a determined outlook on enhancing software development projects by utilizing \textbf{agile methodologies} with a keen interest in open-source projects; currently studying Computer Science BSc (Hons) at Brunel University.
+
+\item Currently investigating how educational gaming can be used as a channel of communication between international physics organisations (i.e. CERN) and A-level physics students through an \textbf{open-source android game}.
+
+\item Actively participating in various programming related meet-up groups and attending numerous events as well as conferences. First undergraduate to be invited as an \textbf{assistant organizer} for the Graduate Developer Community.
+\end{compactitemize}
+
+\section*{Key Skills {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
+{\bf Technical}
+\vspace*{-0.5\baselineskip}
+\begin{compactitemize}
+	\item \textbf{Java} (intermediate): Currently building my final year project as a educational android game.\\
+	Built an open-source GUI based XML-editor based on an older tool; \textbf{re-engineered} it to produce PLC (Programmable Logic Controller) code over an NFS network as well as implemented other features like a custom file lock system for my project in CERN.\\
+	Produced \textbf{open-source modifications} for Call of Duty 4 (PC) within a team of 4; I ensured everything was packed together for regular monthly releases.
+	\item \textbf{C++} (beginner): Built a simple command line program to analyse different mathematical functions. Completed some \textbf{Project Euler} problems in C++.
+	\item \textbf{Javascript} (beginner): Currently participating in \textbf{Code Year} by completing a new set of Javascript courses each week for a full year.
+	\item \textbf{\LaTeX}\ (intermediate): Completed University coursework reports in \LaTeX\ as well as this CV and my business cards.
+	\item \textbf{Others:} Drupal, HTML5, CSS3, PHP, Prolog, SQL (MySQL), jQuery.
+	\item \textbf{Agile:} Experienced use of issue and bug tracking software such as \textbf{JIRA}, actively seek to develop by iterative protoyping, break-down tasks into weekly Sprints (Scrum) and follow the Agile Manifesto.
+	\item \textbf{Tools:} Eclipse, Android SDK, Netbeans, Git, Subversion, ant, Maven, jUnit, cron.
+	\item \textbf{Operating Systems:} Windows XP/7 and Windows Server 2003, Linux (Ubuntu, Scientific Linux CERN 5, and Redhat).
+\end{compactitemize}
+
+{\bf Languages:} \qquad \textbf{English} (native) \quad \textbf{French} (intermediate; fluent) \quad \textbf{Bulgarian} (beginner; can read and write Cyrillic)
+
+\section*{Education {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
+\vspace*{-\baselineskip}
+\begin{tabular*}{\columnwidth}{@{} p{0.2\textwidth} l @{\extracolsep{\fill}} r }\\
+Sep ’08 - Jun ‘12 & {\bf Computer Science BSc, Brunel University} \textit{(predicted} \textbf{1st class}\textit{)} & London, England \\
+\multicolumn{3}{@{} p{\textwidth}}{
+Built a GUI based Java tool to demonstrate and visually compare different sort algorithms. Built a command line game in Java to demonstrate object orientation.\newline
+Key modules: \textbf{Artificial Intelligence}, \textbf{Software Engineering}, Software Project Management, Advanced Topics in Computer Science, Computation, Algorithms \& Implementation.
+}\\
+\end{tabular*}\\[-0.5\baselineskip]
+\begin{tabular*}{\columnwidth}{@{} p{0.2\textwidth} l @{\extracolsep{\fill}} r }\\
+Sep ’07 - Jun ‘08 & {\bf Foundations of Information Technology, Brunel University} & London, England\\
+\multicolumn{3}{@{} p{\textwidth}}{
+Built a command line tool to demonstrate different mathematical functions in C++.
+}\\
+\end{tabular*}\\[-0.5\baselineskip]
+\begin{tabular*}{\columnwidth}{@{} p{0.2\textwidth} l @{\extracolsep{\fill}} r }\\
+Sep ’99 - Jun ‘06 & {\bf Canon Palmer Catholic School} & London, England\\
+\multicolumn{3}{@{} p{\textwidth}}{
+Graduated with Advanced Level certificates in: \textbf{Information Communication Technology} (C), \textbf{Mathematics} (D) and \textbf{Physics} (E), including AS-Level in \textbf{Business Studies} (C).\newline
+Achieved 10 GSCE’s between A to C grades including high grades in: Mathematics, Science, Business Studies, English and Computing.
+}\\
+\end{tabular*}
+
+\section*{Industrial Placement {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
+\vspace*{-\baselineskip}
+\begin{tabular*}{\columnwidth}{@{} p{0.2\textwidth} l @{\extracolsep{\fill}} r }\\
+Jun '10 - Jul '11 & {\bf Technical Student, CERN} & Geneva, Switzerland\\
+\end{tabular*}\\
+\vspace*{-\baselineskip}
+\begin{compactitemize}
+\item I was involved with designing, building and implementing a working \textbf{GUI-based XML-Editor} that produced PLC (Programmable Logic Controller) code and utilizes the NFS network for storage. It was a large project and is used to help the engineers produce PLC code in a shorter period of time without needing expert knowledge of a PLC.
+\item Extensive use of Agile methodology; development progression via \textbf{iterative prototyping}, continuously code refactoring and also implemented some features of Scrum such as a weekly sprint of tasks to-do, tasks currently being done and completed tasks.
+\item Included development work in Java, XML and Python; as well as integrating ant build scripts and updating the code-base under, subversion, a version control system.
+\item I worked with my supervisor on my project building and developing for many different clients who would request feature changes and submit bug reports via \textbf{JIRA}. I also worked alongside many French speaking employees and took two French learning courses to increase my personal knowledge of the language.
+\item Parallel to building my project, I helped out with the running of social events for students under 30 years old. Each month I would organise a \textbf{networking} event for new arrivals to CERN and invite everyone so that the new people would easily integrate with others.
+\item CERN offers every employee the chance to expand their knowledge on any platform domain so I found it easy to educate myself about XML, XPATH, Python, and Agile development.
+\end{compactitemize}
+
+\section*{Employment {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
+\vspace*{-\baselineskip}
+\begin{tabular*}{\columnwidth}{@{} p{0.2\textwidth} l @{\extracolsep{\fill}} r }\\
+Apr ‘10 - May ‘10 & {\bf Freelancer, Mikamai} & London, England\\
+\multicolumn{3}{@{} p{\textwidth}}{
+Updating the company's website to include a new portfolio layout using an open-source CMS (content management system) platform. I was also tasked with updating the Wordpress blog layout and implementing Facebook as well as managing the Facebook page to increase brand awareness.
+}\\
+Sep '09 - Dec '09 & {\bf Freelancer, Diffiniti} & London, England \\
+\multicolumn{3}{@{} p{\textwidth}}{
+Working with a team of people who specialise in Search Engine Optimization (SEO) for various large clients. My work involved submitting client information to on-line directories, clients involved: Sky and AutoTrader.
+}\\
+Nov ‘06 - Aug ‘07 & {\bf Busser, The Old Spaghetti Factory} & Whistler, BC, Canada \\
+Nov ‘06 - Jul ‘07 & {\bf Sandwich Artist, Subway} & Whistler, BC, Canada
+\end{tabular*}
+
+\section*{Volunteer Experience {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
+\vspace*{-\baselineskip}
+\begin{tabular*}{\columnwidth}{@{} p{0.2\textwidth} l @{\extracolsep{\fill}} r }\\
+Aug '11 - Aug '11 & {\bf Global Hope Network Short Term Team} & Dire Dawa, Ethiopia, Africa \\
+\multicolumn{3}{@{} p{\textwidth}}{
+Spent a week volunteering with some of the world's poorest. Involved working with building communities between 3 different villages by organising football matches and creating dialogue with the village elders.
+}\\
+Oct '06 - May '07 & {\bf Whistler Village Host} & Whistler, BC, Canada \\
+Oct '06 - Dec '06 & {\bf Maurice Young Millennium Place} & Whistler, BC, Canada \\
+Nov '06 - Dec '06 & {\bf Whistler Film Festival} & Whistler, BC, Canada
+\end{tabular*}
+
+\section*{Interests \& Activities {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
+\begin{compactitemize}
+\item \textbf{Young @ CERN \& Technical Student Social Organizer}. Organised and managed monthly social events for the students working in CERN. This helped to build a community between the students \& improved social interactions.
+\item Participated in \textbf{Start-up Weekend Geneva 2010}, where my team aimed at creating a fashion company by re-using unsold products from large clothing distributors and \textbf{Start-up Weekend Lausanne 2011}, where my team aimed at building a geo-localisation application focused on providing local shopping deals. The Start-up Weekend events focus on building a start-up company from idea to demo over a 56-hour period in one weekend.
+\item \textbf{Assistant Organizer for the Graduate Developer Community}, I help create and schedule new events with the other organizers. Attended various events including an introduction to using Agile methodology.
+\item Member of the \textbf{London Java Community}, where I have attended various different events. I am also a member of several other meet-up groups such as: London Android Group, PHP London Group and Facebook Developers Garage London.
+\item Attended DroidCon 2011, an \textbf{Android developers conference}, TEDxGeneva 2011, LiFT 2011, and participated in open-source start-up events aimed at teaching students how to get started with an open-source project: from how to commit changes; to forking for building new features.
+\item Avid \textbf{snowboarder}, member of the Brunel Snow Club and past member of the CERN Ski Club.
+\item Thoroughly enjoy \textbf{travelling}; spent a year in Whistler, Canada and another year in France; snowboarded in Slovakia, France, Italy, Switzerland; visited Spain, Bulgaria, America, Ethiopia, and Kenya.
+\end{compactitemize}
+
+\section*{References {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
+Available on request
+
+\end{document}
