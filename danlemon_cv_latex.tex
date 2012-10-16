@@ -1,8 +1,10 @@
 % LaTeX CV
-\documentclass[final,a4paper,notitlepage,10pt]{report}
+\documentclass[final,a4paper,notitlepage,10pt]{article}
 
 %%% Packages %%%
 \usepackage[utf8]{inputenc}	% inputenc for encoding to utf8
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
 \usepackage{auto-pst-pdf}	% auto-pst-pdf converts pst to pdf
 \usepackage{pst-barcode}	% pst-barcode try implement QR code
 \usepackage{multicol}	% multicol used for multiple columns
@@ -43,6 +45,7 @@
 
 % set paragraph indent to 0
 \setlength\parindent{0pt}
+\setlength{\tabcolsep}{0em}
 
 % format section title with a nice center line
 %\titleformat\section{\normalfont\large\centerline{\hss\rule{.7\textwidth}{.01em}\hss}}{\thesection}{.01em}{}
@@ -76,38 +79,39 @@
 
 \section*{Personal Profile {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
 \begin{compactitemize}
-\item Enthusiastic outgoing undergraduate with a determined outlook on enhancing software development projects by utilizing \textbf{agile methodologies} with a keen interest in open-source projects; currently studying Computer Science BSc (Hons) at Brunel University.
+\item Enthusiastic \& outgoing with a determined outlook on enhancing software development projects by utilizing \textbf{agile methodologies} and a keen interest in open-source projects.
 
-\item Currently investigating how educational gaming can be used as a channel of communication between international physics organisations (i.e. CERN) and A-level physics students through an \textbf{open-source android game}.
-
-\item Actively participating in various programming related meet-up groups and attending numerous events as well as conferences. First undergraduate to be invited as an \textbf{assistant organizer} for the Graduate Developer Community.
+\item Actively participating in various programming related meet-up groups and attending numerous events as well as conferences. \textbf{Assistant organizer} for the Graduate Developer Community and assistant organizer for the first official CERN Summer Students Webfest, similar to a weekend long hackathon.
 \end{compactitemize}
 
 \section*{Key Skills {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
 {\bf Technical}
 \vspace*{-0.5\baselineskip}
 \begin{compactitemize}
-	\item \textbf{Java} (intermediate): Currently building final year project as a educational android game.\\
+	\item \textbf{Java} (intermediate): Built my final year project as a educational android game based that simulated the LHC particle collisions.\\
 	Built an open-source GUI based XML-editor based on an older tool; \textbf{re-engineered} it to produce PLC (Programmable Logic Controller) code over an NFS network as well as implemented other features like a custom file lock system for the IEPLC project in CERN.\\
 	Produced \textbf{open-source modifications} for Call of Duty 4 (PC) within a team of 4; ensuring everything was packed together for regular monthly releases.
-	\item \textbf{C++} (beginner): Built a simple command line program to analyse different mathematical functions. Completed some \textbf{Project Euler} problems in C++.
-	\item \textbf{Javascript} (beginner): Currently participating in \textbf{Code Year} by completing a new set of Javascript courses each week for a full year.
+	\item \textbf{C++}: Built a simple command line program to analyse different mathematical functions. Completed some \textbf{Project Euler} problems in C++.
+	\item \textbf{Javascript}: Currently participating in \textbf{Code Year} by completing a new set of Javascript courses each week for a full year.
 	\item \textbf{\LaTeX}\ (intermediate): Completed University coursework reports in \LaTeX\ as well as this CV and personal business cards.
-	\item \textbf{Others:} Drupal, HTML5, CSS3, PHP, Prolog, SQL (MySQL), jQuery.
-	\item \textbf{Agile:} Experienced use of issue and bug tracking software such as \textbf{JIRA}, actively seek to develop by iterative protoyping, break-down tasks into weekly Sprints (Scrum) and follow the Agile Manifesto.
+	\item \textbf{Others:} Drupal, HTML5, CSS3, PHP, Prolog, SQL (MySQL), jQuery, Arduino.
+	\item \textbf{Agile:} Experienced use of issue and bug tracking software such as \textbf{JIRA}, actively seek to develop by iterative prototyping, break-down tasks into weekly Sprints (Scrum) and follow the Agile Manifesto.
 	\item \textbf{Tools:} Eclipse, Android SDK, Netbeans, Git, Subversion, ant, Maven, jUnit, cron.
 	\item \textbf{Operating Systems:} Windows XP/7 and Windows Server 2003, Linux (Ubuntu, Scientific Linux CERN 5, and Redhat).
 \end{compactitemize}
 
-{\bf Languages:} \qquad \textbf{English} (native) \quad \textbf{French} (intermediate; fluent) \quad \textbf{Bulgarian} (beginner; can read and write Cyrillic)
+{\bf Languages:} \qquad \textbf{English} (native) \quad \textbf{French} (intermediate; fluent) \quad \textbf{Bulgarian} (can read and write Cyrillic)
 
 \section*{Education {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
 \vspace*{-\baselineskip}
 \begin{tabular*}{\columnwidth}{@{} p{0.2\textwidth} l @{\extracolsep{\fill}} r }\\
-Sep ’08 - Jun ‘12 & {\bf Computer Science BSc, Brunel University} \textbf{2:1} & London, England \\
+Sep ’08 - Jun ‘12 & {\bf Computer Science BSc, Brunel University} \textbf{(2.1)} & London, England \\
 \multicolumn{3}{@{} p{\textwidth}}{
+Completed my final year project by investigating how educational gaming can be used as a channel of communication between international Physics
+organisations (i.e. CERN) and A-level Physics students through an open-source android game.\newline
+As part of my placement I also acquired a \textbf{Diploma in Professional Development} for my work in CERN.\newline
 Built a GUI based Java tool to demonstrate and visually compare different sort algorithms. Built a command line game in Java to demonstrate object orientation.\newline
-Key modules: \textbf{Artificial Intelligence}, \textbf{Software Engineering}, Software Project Management, Advanced Topics in Computer Science, Computation, Algorithms \& Implementation.
+Key modules: \textbf{Software Engineering}, Software Project Management, Computation, Algorithms \& Implementation.
 }\\
 \end{tabular*}\\[-0.5\baselineskip]
 \begin{tabular*}{\columnwidth}{@{} p{0.2\textwidth} l @{\extracolsep{\fill}} r }\\
@@ -182,13 +186,12 @@ Interviewed people and conducted surveys around the village to record peoples' f
 
 \section*{Interests \& Activities {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
 \begin{compactitemize}
-\item \textbf{Young @ CERN \& Technical Student Social Organizer}. Organised and managed monthly social events for the students working in CERN. This helped to build a community between the students \& improved social interactions.
+\item \textbf{Young @ CERN \& Technical Student Social Organizer}; Organised and managed monthly social events for the students working in CERN. This helped to build a community between the students \& improved social interactions.
 \item Participated in \textbf{Start-up Weekend Geneva 2010}, involved with a team that aimed at creating a fashion company by re-using unsold products from large clothing distributors and \textbf{Start-up Weekend Lausanne 2011}, involved in a team that aimed at building a geo-localisation application focused on providing local shopping deals. The Start-up Weekend events focus on building a start-up company from idea to demo over a 56-hour period in one weekend.
 \item \textbf{Assistant Organizer for the Graduate Developer Community}, help to create and schedule new events with the other organizers. Attended various events including an introduction to using Agile methodology.
 \item Member of the \textbf{London Java Community}, attended various different events as well as being a member of several other meet-up groups such as: London Android Group, PHP London Group and Facebook Developers Garage London.
-\item Attended DroidCon 2011, an \textbf{Android developers conference}, TEDxGeneva 2011, LiFT 2011, and participated in open-source start-up events aimed at teaching students how to get started with an open-source project: from how to commit changes; to forking for building new features.
-\item Avid \textbf{snowboarder}, member of the Brunel Snow Club and past member of the CERN Ski Club.
-\item Thoroughly enjoy \textbf{travelling}; spent a year in Whistler, Canada and another year in France; snowboarded in Slovakia, France, Italy, Switzerland; visited Spain, Bulgaria, America, Ethiopia, and Kenya.
+\item Attended DroidCon 2011, an \textbf{Android developers conference}, TEDxGeneva 2011, LiFT 2011, and participated in open-source start-up events aimed at teaching students how to get started with an open-source project: from how to commit changes; to forking when building new features.
+\item Avid \textbf{snowboarder} and thoroughly enjoy \textbf{travelling}.
 \end{compactitemize}
 
 \section*{References {\hfill\raisebox{.5ex}{\makebox[.65\textwidth]{\hrulefill}}}}
